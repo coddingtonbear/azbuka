@@ -1,0 +1,21 @@
+{
+  "build": {
+    "extra_flags": "-DARDUINO_ARCH_AVR -DARDUINO_AVR_ATTINY85",
+    "core": "arduino",
+    "f_cpu": "16500000L",
+    "mcu": "attiny85",
+    "variant": "tiny8"
+  },
+  "frameworks": [
+    "arduino"
+  ],
+  "name": "Azbuka 1.0 (Attiny85@16.5M,5V)",
+  "upload": {
+    "maximum_ram_size": 512,
+    "maximum_size": 8192,
+    "protocol": "usbtiny",
+    "extra_flags": "-e"
+  },
+  "url": "https://coddingtonbear.net/",
+  "vendor": "@coddingtonbear"
+}
