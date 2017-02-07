@@ -1,0 +1,132 @@
+PCBNEW-LibModule-V1  
+# encoding utf-8
+Units mm
+$INDEX
+SOIC127P798X216-8N
+$EndINDEX
+$MODULE SOIC127P798X216-8N
+Po 0 0 0 15 00000000 00000000 ~~
+Li SOIC127P798X216-8N
+Cd 
+Sc 00000000
+At SMD
+Op 0 0 0
+.SolderMask 0.1
+.SolderPaste 0
+T0 -1.969 -3.7425 1 1 0 0.05 N V 21 "SOIC127P798X216-8N"
+T1 -1.384 3.879 1 1 0 0.05 N V 21 "VAL**"
+DS -2.65 2.625 -2.65 -2.625 0.1524 24
+DS 2.65 2.625 2.65 -2.625 0.1524 24
+DC -1.615 -1.62 -1.115 -1.62 0.0508 21
+DS -2.65 -2.625 2.65 -2.625 0.1524 21
+DS -2.65 2.625 2.65 2.625 0.1524 21
+DP 0 0 0 0 4 0.381 24
+Dl -4 -2.105
+Dl -2.65 -2.105
+Dl -2.65 -1.705
+Dl -4 -1.705
+DP 0 0 0 0 4 0.381 24
+Dl -4 -0.835
+Dl -2.65 -0.835
+Dl -2.65 -0.435
+Dl -4 -0.435
+DP 0 0 0 0 4 0.381 24
+Dl -4 0.435
+Dl -2.65 0.435
+Dl -2.65 0.835
+Dl -4 0.835
+DP 0 0 0 0 4 0.381 24
+Dl -4 1.705
+Dl -2.65 1.705
+Dl -2.65 2.105
+Dl -4 2.105
+DP 0 0 0 0 4 0.381 24
+Dl 2.65 -2.105
+Dl 4 -2.105
+Dl 4 -1.705
+Dl 2.65 -1.705
+DP 0 0 0 0 4 0.381 24
+Dl 2.65 -0.835
+Dl 4 -0.835
+Dl 4 -0.435
+Dl 2.65 -0.435
+DP 0 0 0 0 4 0.381 24
+Dl 2.65 0.435
+Dl 4 0.435
+Dl 4 0.835
+Dl 2.65 0.835
+DP 0 0 0 0 4 0.381 24
+Dl 2.65 1.705
+Dl 4 1.705
+Dl 4 2.105
+Dl 2.65 2.105
+DC -4 -2.65 -3.873 -2.65 0 21
+DS -4.5 -3 -4.5 3 0.05 24
+DS -4.5 3 4.5 3 0.05 24
+DS 4.5 3 4.5 -3 0.05 24
+DS 4.5 -3 -4.5 -3 0.05 24
+$PAD
+Sh "1" R 0.55 1.5 0 0 2700
+At SMD N 00888000
+.SolderMask 0.2
+.SolderPaste 0
+Ne 0 ""
+Po -3.45 -1.905
+$EndPAD
+$PAD
+Sh "2" R 0.55 1.5 0 0 2700
+At SMD N 00888000
+.SolderMask 0.2
+.SolderPaste 0
+Ne 0 ""
+Po -3.45 -0.635
+$EndPAD
+$PAD
+Sh "3" R 0.55 1.5 0 0 2700
+At SMD N 00888000
+.SolderMask 0.2
+.SolderPaste 0
+Ne 0 ""
+Po -3.45 0.635
+$EndPAD
+$PAD
+Sh "4" R 0.55 1.5 0 0 2700
+At SMD N 00888000
+.SolderMask 0.2
+.SolderPaste 0
+Ne 0 ""
+Po -3.45 1.905
+$EndPAD
+$PAD
+Sh "8" R 0.55 1.5 0 0 2700
+At SMD N 00888000
+.SolderMask 0.2
+.SolderPaste 0
+Ne 0 ""
+Po 3.45 -1.905
+$EndPAD
+$PAD
+Sh "7" R 0.55 1.5 0 0 2700
+At SMD N 00888000
+.SolderMask 0.2
+.SolderPaste 0
+Ne 0 ""
+Po 3.45 -0.635
+$EndPAD
+$PAD
+Sh "6" R 0.55 1.5 0 0 2700
+At SMD N 00888000
+.SolderMask 0.2
+.SolderPaste 0
+Ne 0 ""
+Po 3.45 0.635
+$EndPAD
+$PAD
+Sh "5" R 0.55 1.5 0 0 2700
+At SMD N 00888000
+.SolderMask 0.2
+.SolderPaste 0
+Ne 0 ""
+Po 3.45 1.905
+$EndPAD
+$EndMODULE SOIC127P798X216-8N
