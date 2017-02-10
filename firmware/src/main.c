@@ -32,8 +32,8 @@ PB0, PB2 = USB data lines
 
 /* ------------------------------------------------------------------------- */
 
-const uchar     dashlength  = 9;
-const uchar     spacelength = 45;   // longer for farnsworth pause
+const uchar     dashlength  = 10;    // 9
+const uchar     spacelength = 100;   // 45; longer for farnsworth pause
 
 static uchar    reportBuffer[2];    // buffer for HID reports
 static uchar    idleRate;           // in 4 ms units
@@ -119,7 +119,7 @@ static void timerPoll(void) {
         TIFR = (1 << TOV1);  // clear overflow
 
         if(!(PINB & (1 << BIT_KEY))){ //key held
-            TCCR0B = 3; //Sound on
+            //TCCR0B = 3; //Sound on
             if (down++ ==spacelength+dashlength) {
                 down=spacelength;
                 typechar(0x2A);
