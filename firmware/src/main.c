@@ -23,6 +23,8 @@ PB0, PB2 = USB data lines
 #define BIT_PIEZO 1
 #define BIT_KEY 4
 
+#define SOUND_ENABLED 0
+
 #define UTIL_BIN4(x)        (uchar)((0##x & 01000)/64 + (0##x & 0100)/16 + (0##x & 010)/4 + (0##x & 1))
 #define UTIL_BIN8(hi, lo)   (uchar)(UTIL_BIN4(hi) * 16 + UTIL_BIN4(lo))
 
@@ -119,7 +121,9 @@ static void timerPoll(void) {
         TIFR = (1 << TOV1);  // clear overflow
 
         if(!(PINB & (1 << BIT_KEY))){ //key held
-            //TCCR0B = 3; //Sound on
+            if(SOUND_ENABLED) {
+                TCCR0B = 3; //Sound on
+            }
             if (down++ ==spacelength+dashlength) {
                 down=spacelength;
                 typechar(0x2A);
