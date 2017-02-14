@@ -1,6 +1,6 @@
 # Azbuka: Morse Code USB Keyboard
 
-![](https://coddingtonbear-public.s3.amazonaws.com/github/azbuka/azbuka_1.0.jpg)
+![](https://s3-us-west-2.amazonaws.com/coddingtonbear-public/github/azbuka/azbuka_2.0.jpg)
 
 *Note*: This is directly derived from [@mitxela](https://github.com/mitxela)'s
 [Morse USB Keyboard Mk II](https://mitxela.com/projects/morse_code_usb_keyboard_mk_ii);
