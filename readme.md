@@ -9,6 +9,10 @@ changes and slightly altered software.  If you were interested in this
 project, you will probably also enjoy his
 [other projects](https://mitxela.com/projects/hardware) -- check them out!
 
+## Schematic
+
+![](https://s3-us-west-2.amazonaws.com/coddingtonbear-public/github/azbuka/azbuka_2.0__schematic.svg)
+
 ## Fuse Settings:
 
 * `lfuse`: `0xe1`
