@@ -80,22 +80,6 @@ F 3 "" H 5540 1550 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L SJ1-3524NG U3
-U 1 1 5897E30F
-P 4800 4650
-F 0 "U3" H 4800 4650 50  0001 L CNN
-F 1 "SJ1-3524NG" H 4800 4650 50  0001 L CNN
-F 2 "azbuka:PIN-4_MODIFIED_NO_HOLES" H 4800 4650 50  0001 L CNN
-F 3 "SJ1-3524NG" H 4800 4650 50  0001 L CNN
-F 4 "audio jack, 3.5 mm, rt, stereo, through hole, 1 switch, isolated ground" H 4800 4650 50  0001 L CNN "Description"
-F 5 "None" H 4800 4650 50  0001 L CNN "Package"
-F 6 "0.59 USD" H 4800 4650 50  0001 L CNN "Price"
-F 7 "Good" H 4800 4650 50  0001 L CNN "Availability"
-F 8 "CUI" H 4800 4650 50  0001 L CNN "MF"
-	1    4800 4650
-	0    -1   -1   0   
-$EndComp
-$Comp
 L +5V #PWR2
 U 1 1 5897E9B7
 P 1500 2650
@@ -200,31 +184,6 @@ Wire Wire Line
 	4750 2650 5850 2650
 Text GLabel 5750 2850 0    60   Input ~ 0
 DIT
-Text GLabel 5750 2750 0    60   Input ~ 0
-DAH
-Text GLabel 5250 3850 1    60   Output ~ 0
-DIT
-Text GLabel 4550 3850 1    60   Output ~ 0
-DAH
-$Comp
-L GND #PWR7
-U 1 1 5897F249
-P 4250 3750
-F 0 "#PWR7" H 4250 3500 50  0001 C CNN
-F 1 "GND" H 4255 3577 50  0000 C CNN
-F 2 "" H 4250 3750 50  0000 C CNN
-F 3 "" H 4250 3750 50  0000 C CNN
-	1    4250 3750
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	4250 3750 4250 3950
-Wire Wire Line
-	4550 3950 4550 3850
-Wire Wire Line
-	5250 3950 5250 3850
-Wire Wire Line
-	5750 2750 5850 2750
 Wire Wire Line
 	5850 2850 5750 2850
 $Comp
@@ -381,9 +340,9 @@ F 3 "" H 2300 3300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2400 3000 2400 3300
+	2400 3300 2400 3000
 Wire Wire Line
-	2400 3300 2150 3300
+	2150 3300 2400 3300
 Wire Wire Line
 	2150 3300 2150 3000
 Connection ~ 2300 3300
@@ -479,4 +438,32 @@ F 3 "" H 2150 2850 50  0000 C CNN
 	1    2150 2850
 	0    1    1    0   
 $EndComp
+$Comp
+L TACT-SWITCH SW?
+U 1 1 594328A3
+P 4300 3800
+F 0 "SW?" H 4300 4055 50  0000 C CNN
+F 1 "TACT-SWITCH" H 4300 3964 50  0000 C CNN
+F 2 "" H 4300 3800 60  0000 C CNN
+F 3 "" H 4300 3800 60  0000 C CNN
+	1    4300 3800
+	1    0    0    -1  
+$EndComp
+Text GLabel 4700 3800 2    60   Input ~ 0
+DIT
+$Comp
+L GND #PWR?
+U 1 1 5943293E
+P 3850 3800
+F 0 "#PWR?" H 3850 3550 50  0001 C CNN
+F 1 "GND" H 3855 3627 50  0000 C CNN
+F 2 "" H 3850 3800 50  0000 C CNN
+F 3 "" H 3850 3800 50  0000 C CNN
+	1    3850 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 3800 4700 3800
+Wire Wire Line
+	3850 3800 4000 3800
 $EndSCHEMATC

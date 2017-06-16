@@ -23,7 +23,7 @@ PB0, PB2 = USB data lines
 #define BIT_PIEZO 1
 #define BIT_KEY 4
 
-#define SOUND_ENABLED 0
+#define SOUND_ENABLED 1
 
 #define UTIL_BIN4(x)        (uchar)((0##x & 01000)/64 + (0##x & 0100)/16 + (0##x & 010)/4 + (0##x & 1))
 #define UTIL_BIN8(hi, lo)   (uchar)(UTIL_BIN4(hi) * 16 + UTIL_BIN4(lo))
@@ -122,7 +122,8 @@ static void timerPoll(void) {
 
         if(!(PINB & (1 << BIT_KEY))){ //key held
             if(SOUND_ENABLED) {
-                TCCR0B = 3; //Sound on
+                PORTB |= (1 << BIT_PIEZO);
+                //TCCR0B = 3; //Sound on
             }
             if (down++ ==spacelength+dashlength) {
                 down=spacelength;
@@ -131,7 +132,8 @@ static void timerPoll(void) {
             }
             if (down<spacelength) up=0;
         } else if (down){
-            TCCR0B = 0; //Sound off
+            PORTB &= ~(1 << BIT_PIEZO);
+            //TCCR0B = 0; //Sound off
             if (symbol!=&symbolBuffer[sizeof(symbolBuffer)]){
                 if (down>=spacelength) {
                     *symbol=0;
@@ -144,7 +146,8 @@ static void timerPoll(void) {
             }
             down =0;
         } else {
-            TCCR0B = 0; //Sound off
+            PORTB &= ~(1 << BIT_PIEZO);
+            //TCCR0B = 0; //Sound off
             if (up++ ==255) up=255;
             if (up==1+dashlength) {
                 modifier=0;
@@ -323,9 +326,9 @@ static void timerPoll(void) {
 /* ------------------------------------------------------------------------- */
 
 static void timerInit(void) {
-    TCCR0A = 0b00010010;
-    TCCR0B = 0;
-    OCR0A = 64;
+    //TCCR0A = 0b00010010;
+    //TCCR0B = 0;
+    //OCR0A = 64;
     TCCR1 = 0x0b;           /* select clock: 16.5M/1k -> overflow rate = 16.5M/256k = 62.94 Hz */
     modifier=0;
     symbol=&symbolBuffer[sizeof(symbolBuffer)];
